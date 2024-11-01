@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+)
+
+// Recursive function to calculate x^y
+func pangkat(x int, y int) int {
+	if y == 0 {
+		return 1
+	}
+	return x * pangkat(x, y-1)
+}
+
+func identitas() {
+	fmt.Println("=================================")
+	fmt.Println("Nama: Haposan Siregar")
+	fmt.Println("NIM: 2311102210")
+	fmt.Println("=================================")
+}
+
+
+func main() {
+	identitas() // Menampilkan identitas
+	var x, y int
+	fmt.Print("Masukkan bilangan x: ")
+	fmt.Scan(&x)
+	fmt.Print("Masukkan bilangan y: ")
+	fmt.Scan(&y)
+	
+	result := pangkat(x, y)
+	fmt.Printf("Hasil %d pangkat %d adalah: %d\n", x, y, result)
+}
