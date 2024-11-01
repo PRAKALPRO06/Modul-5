@@ -1,0 +1,34 @@
+package main
+
+import (
+	"fmt"
+)
+
+// Fungsi rekursif untuk mencetak faktor
+func printFactors(n, divisor int) {
+	if divisor > n {
+		return
+	}
+	if n%divisor == 0 {
+		fmt.Printf("%d ", divisor)
+	}
+	printFactors(n, divisor+1)
+}
+
+func identitas() {
+	fmt.Println("=================================")
+	fmt.Println("Nama: Haposan Siregar")
+	fmt.Println("NIM: 2311102210")
+	fmt.Println("=================================")
+}
+
+
+func main() {
+	identitas() // Menampilkan identitas
+	var n int
+	fmt.Print("Masukkan bilangan: ")
+	fmt.Scan(&n)
+	fmt.Printf("Faktor dari %d: ", n)
+	printFactors(n, 1)
+	fmt.Println()
+}
