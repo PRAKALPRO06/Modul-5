@@ -1,0 +1,40 @@
+package main
+
+import (
+	"fmt"
+)
+
+// Fungsi rekursif untuk mencetak bintang
+func CetakBintang(n int) {
+	if n == 0 {
+		return
+	}
+	CetakBintang(n - 1)
+	fmt.Print("*")
+}
+
+// Fungsi rekursif untuk mencetak pola 
+func cetakPola(n, current int) {
+	if current > n {
+		return
+	}
+	CetakBintang(current)
+	fmt.Println()
+	cetakPola(n, current+1)
+}
+
+func identitas() {
+	fmt.Println("=================================")
+	fmt.Println("Nama: Haposan Siregar")
+	fmt.Println("NIM: 2311102210")
+	fmt.Println("=================================")
+}
+
+
+func main() {
+	identitas() // Menampilkan identitas
+	var n int
+	fmt.Print("Masukkan angka: ")
+	fmt.Scan(&n)
+	cetakPola(n, 1)
+}
