@@ -1,0 +1,33 @@
+package main
+
+import "fmt"
+
+func identitas() {
+	fmt.Println("=================================")
+	fmt.Println("Nama: Haposan Siregar")
+	fmt.Println("NIM: 2311102210")
+	fmt.Println("=================================")
+}
+
+
+func main() {
+	identitas() // Menampilkan identitas
+    var N int
+    fmt.Print("Masukkan nilai N: ")
+    fmt.Scanln(&N)
+
+    fmt.Println("Keluaran terdiri dari barisan bilangan dari N hingga 1 dan kembali ke N.")
+    printSequence(N)
+}
+
+func printSequence(n int) {
+    if n == 0 {
+        return
+    }
+
+    fmt.Print(n, " ")
+    if n > 1 {
+        printSequence(n - 1)
+    }
+    fmt.Print(n, " ")
+}
