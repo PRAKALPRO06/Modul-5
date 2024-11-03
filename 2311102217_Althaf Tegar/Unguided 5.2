@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+func printBintang2217(n int) {
+	if n == 0 {
+		return
+	}
+
+	for i := 0; i < n; i++ {
+		fmt.Print("*")
+	}
+	fmt.Println()
+
+	printBintang2217(n - 1)
+}
+
+func main() {
+	var n int
+	fmt.Print("Masukkan nilai: ")
+	fmt.Scanln(&n)
+
+	fmt.Println("Pola Bintang:")
+	printBintang2217(n)
+}
