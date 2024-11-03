@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func detectFactors17(n217 int, i2217 int, factors []int) []int {
+	if i2217 > n217 {
+		return factors
+	}
+
+	if n217%i2217 == 0 {
+		factors = append(factors, i2217)
+	}
+
+	return detectFactors17(n217, i2217+1, factors)
+}
+
+func main() {
+	var n int
+	fmt.Print("Masukkan bilangan: ")
+	fmt.Scanln(&n)
+
+	factors := detectFactors17(n, 1, []int{})
+	fmt.Println("Faktor bilangan:", factors)
+}
