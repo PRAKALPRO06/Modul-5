@@ -1,0 +1,25 @@
+package main
+
+import "fmt"
+
+// Deret Fibonanci
+func deret_fibonacci217(n217 int) int {
+	if n217 == 0 {
+		return 0
+	} else if n217 == 1 {
+		return 1
+	} else {
+		return deret_fibonacci217(n217-1) + deret_fibonacci217(n217-2)
+	}
+}
+
+func main() {
+	var n int
+	fmt.Print("Masukkan nilai: ")
+	fmt.Scanln(&n)
+	fmt.Println("Deret Fibonacci:")
+	for i := 0; i <= n; i++ {
+		fmt.Print(deret_fibonacci217(i), " ")
+	}
+	fmt.Println()
+}
