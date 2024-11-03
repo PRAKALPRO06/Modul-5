@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func SequencePrint_2217(n17 int) {
+	if n17 == 0 {
+		return
+	}
+	fmt.Print(n17, " ")
+	SequencePrint_2217(n17 - 1)
+	fmt.Print(n17+1-1, " ")
+}
+
+func main() {
+	var n int
+	fmt.Print("Masukkan bilangan: ")
+	fmt.Scanln(&n)
+	fmt.Println("Barisan bilangan:")
+	SequencePrint_2217(n)
+	fmt.Println()
+}
