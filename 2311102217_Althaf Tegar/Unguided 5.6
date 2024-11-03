@@ -1,0 +1,21 @@
+package main
+
+import "fmt"
+
+func pangkat17(x22, y17 int) int {
+	if y17 == 0 {
+		return 1
+	}
+	return x22 * pangkat17(x22, y17-1)
+}
+
+func main() {
+	var x2, y17 int
+	fmt.Print("Masukkan bilangan X: ")
+	fmt.Scanln(&x2)
+	fmt.Print("Masukkan bilangan Y: ")
+	fmt.Scanln(&y17)
+
+	result := pangkat17(x2, y17)
+	fmt.Printf("%d pangkat %d = %d\n", x2, y17, result)
+}
