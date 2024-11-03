@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func OddSequence2217(n17 int) {
+	if n17 < 1 {
+		return
+	}
+
+	fmt.Print(n17, " ")
+	OddSequence2217(n17 - 2)
+}
+
+func main() {
+	var n int
+	fmt.Print("Masukkan bilangan: ")
+	fmt.Scanln(&n)
+
+	fmt.Println("Barisan bilangan ganjil:")
+	OddSequence2217(n)
+	fmt.Println()
+}
